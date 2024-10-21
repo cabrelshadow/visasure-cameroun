@@ -2,11 +2,13 @@
   "name": "visasure",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --watch src --exec ts-node src/app.ts",
     "start": "nodemon src/app.ts",
-    "seed-admin": "node src/seeders/seederAdmin.ts"
+    "seed-admin": "node src/seeders/seederAdmin.ts",
+    "build": "npx babel src -d dist"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +30,9 @@
     "winston": "^3.14.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.25.7",
+    "@babel/core": "^7.25.8",
+    "@babel/preset-env": "^7.25.8",
     "@types/bcrypt": "^5.0.2",
     "@types/cors": "^2.8.17",
     "@types/jsonwebtoken": "^9.0.7",

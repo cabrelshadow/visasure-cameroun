@@ -41,7 +41,7 @@ export const errorMessages: { [key: string]: { title: string, message: string } 
   },
   INVALID_PHONE_NUMBER: {
     title: "Numéro invalide",
-    message: "Le numéro de téléphone est invalide."
+    message: "Le numéro de votre contact invalide (doit contenir uniquement des chiffres)."
   },
   INVALID_COUNTRY_CODE: {
     title: "Code pays invalide",

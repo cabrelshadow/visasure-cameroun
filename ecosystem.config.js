@@ -1,13 +1,11 @@
 module.exports = {
-    apps: [{
-      name: "visasure-api",
-      script: "npm",
-      args: "start",
-      cwd: "/var/www/visasure-cameroun/",
-      watch: true,
-      env: {
-        NODE_ENV: "production",
-        PORT: 3000
-      }
-    }]
-  };
+  apps: [{
+    name: "visasure-api",
+    script: "src/app.ts",
+    interpreter: "node",
+    interpreter_args: "-r ts-node/register",
+    env: {
+      NODE_ENV: "development",
+    }
+  }]
+};

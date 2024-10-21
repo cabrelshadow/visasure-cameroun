@@ -56,12 +56,12 @@ export const VisaService = {
         throw new Error("INVALID_EMAIL_FORMAT");
       }
         // Validation du numéro de téléphone (uniquement des chiffres et longueur de 10 chiffres)
-    const phoneRegex = /^\d{09}$/;
+      const phoneRegex = /^\d+$/; 
     if (!phoneRegex.test(phoneNumber)) {
       throw new Error("INVALID_PHONE_NUMBER");
     }
       // Validation du préfixe international (country code) (optionnel : si nécessaire)
-    const friendlyNumberCountryRegex = /^\d+$/;
+    const friendlyNumberCountryRegex = /^\d{09}$/;
     if (!friendlyNumberCountryRegex.test(friendlyNumberCountry)) {
       throw new Error("INVALID_COUNTRY_CODE");
     }
